@@ -1,0 +1,12 @@
+{
+  "frontend/src/index.css": "Global styles with a warm cream/amber OKLCH color palette, Google Fonts import for Lora (serif) and Inter (sans-serif), and semantic CSS variable tokens for both light and dark modes.",
+  "frontend/tailwind.config.js": "Extended Tailwind config with custom font families (Lora serif, Inter sans), warm amber card shadow tokens, and a fade-in animation keyframe.",
+  "frontend/src/hooks/useQueries.ts": "React Query hooks for all backend operations: fetching all recordings, adding, removing, and updating recordings with automatic cache invalidation.",
+  "frontend/src/components/Layout.tsx": "App shell with sticky header (logo, nav links), main content slot, and footer with caffeine.ai attribution and dynamic year.",
+  "frontend/src/components/LectureCard.tsx": "Card component displaying a single lecture entry with title, color-coded tag badge, notes preview, formatted date, open-video button, and delete with AlertDialog confirmation.",
+  "frontend/src/components/LectureFilters.tsx": "Filter bar with a search input (title/notes keyword) and a tag/category Select dropdown, plus a clear-all button when filters are active.",
+  "frontend/src/components/LectureForm.tsx": "Controlled form for adding a lecture with title, URL (with validation), category/tag, and notes fields; shows a success animation after save.",
+  "frontend/src/pages/AddLecturePage.tsx": "Page wrapping LectureForm with a back button, page header, and card container; calls the addRecording mutation and shows toast feedback.",
+  "frontend/src/pages/LectureListPage.tsx": "Main listing page showing all saved lectures in a 2-column card grid with search/filter, skeleton loading, empty/error states, and delete functionality.",
+  "frontend/src/App.tsx": "Root app with TanStack Router setup (root layout route with Outlet, / and /add child routes), RouterProvider, and Sonner Toaster."
+}

@@ -1,0 +1,21 @@
+{
+  "backend/main.mo": "Motoko actor defining a recordings store with CRUD operations (add, get, getAll, remove, update, getByTag) using a Map keyed by auto-incremented IDs and sorted by creation time.",
+  "feature_evidence.json": "Feature evidence report mapping each product feature (add lecture, list view, search/filter, delete, theming) to the frontend source files and test IDs that implement them.",
+  "frontend-file-summaries.txt": "JSON document containing one-sentence descriptions of every frontend source file, serving as a quick reference for the project's frontend structure.",
+  "frontend/index.css": "Tailwind base stylesheet defining OKLCH-based CSS custom property tokens for light and dark color themes including background, card, primary, and sidebar variables.",
+  "frontend/index.html": "Minimal HTML entry point titled 'Lecture Link Saver' that mounts the React app into a root div via the Vite module script.",
+  "frontend/src/App.tsx": "Root React component that sets up TanStack Router with a root layout route (Layout + Outlet) and two child routes: '/' (LectureListPage) and '/add' (AddLecturePage), plus a Sonner Toaster.",
+  "frontend/src/components/Layout.tsx": "App shell component rendering a sticky header with logo, 'My Lectures' and 'Add Lecture' nav links, a main content slot, and a branded footer with active-route highlighting.",
+  "frontend/src/components/LectureCard.tsx": "Card component that displays a single recording's title, color-coded tag badge, notes preview, formatted creation date, an external-link button, and a delete button backed by an AlertDialog confirmation.",
+  "frontend/src/components/LectureFilters.tsx": "Filter bar component providing a keyword search input and a tag/category Select dropdown, with a clear-all button that appears when any filter is active.",
+  "frontend/src/components/LectureForm.tsx": "A React form component for adding a lecture with title, URL, description, and tag fields, including validation, submission handling, and a success state display.",
+  "frontend/src/hooks/useActor.ts": "A custom hook that creates and caches an ICP backend actor (authenticated or anonymous) using React Query, and invalidates dependent queries when the actor changes.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Provides an InternetIdentityProvider and useInternetIdentity hook for managing ICP Internet Identity authentication state, including login, logout, and identity persistence via AuthClient.",
+  "frontend/src/hooks/useQueries.ts": "Defines React Query hooks for fetching, adding, removing, and updating recordings by calling the ICP backend actor, with cache invalidation on mutations.",
+  "frontend/src/index.css": "Global CSS file that imports Google Fonts (Lora and Inter), sets up Tailwind directives, and defines light and dark theme CSS custom properties for a warm cream/amber color palette.",
+  "frontend/src/main.tsx": "Application entry point that renders the React app wrapped with QueryClientProvider and InternetIdentityProvider.",
+  "frontend/src/pages/AddLecturePage.tsx": "A page component that renders the LectureForm inside a card layout, handles lecture submission via the addRecording mutation, and navigates back to the home page on success.",
+  "frontend/src/pages/LectureListPage.tsx": "A page component that displays all saved lecture recordings with search and tag filtering, skeleton loading states, error handling, and delete functionality.",
+  "frontend/tailwind.config.js": "Tailwind CSS configuration for the frontend, extending the default theme with custom fonts (Lora, Inter), oklch-based color tokens, border radii, box shadows, and keyframe animations, while enabling typography, container-queries, and animate plugins.",
+  "project_state.json": "Project state manifest describing the 'Lecture Link Saver' app, listing five implemented frontend features (save, list, search/filter, delete, theming) and three pending backend/architectural requests (data model, API, drive-style storage)."
+}

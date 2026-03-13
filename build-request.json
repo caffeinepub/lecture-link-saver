@@ -1,0 +1,132 @@
+{
+  "kind": "build_request",
+  "title": "Recorded Lecture Link Saver App",
+  "projectName": "Lecture Vault",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a backend data model and API to store recorded lecture links. Each entry should have: a title, a URL (the lecture recording link), an optional description/notes field, a label/category tag, and a creation timestamp.",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Record lecture ka link ha Mera pass or usko mera ko alag say save karna ha drive may lika yad rakhna"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Backend exposes functions to add, retrieve, update, and delete lecture link entries.",
+        "Each lecture entry stores: title, URL, notes, label, and createdAt timestamp.",
+        "Data persists across canister upgrades using stable storage."
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Build a frontend page that allows users to save a new recorded lecture link by entering a title, the video URL, an optional notes/description, and an optional label/category. Display a confirmation after saving.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "usko mera ko alag say save karna ha",
+          "wo lecture ka link ha record video is link ka under may ha"
+        ]
+      },
+      "acceptanceCriteria": [
+        "A form is available with fields: Title (required), URL (required), Notes (optional), Label/Category (optional).",
+        "Submitting the form saves the entry to the backend.",
+        "A success message is shown after a link is saved.",
+        "URL field validates that the input is a valid URL format."
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Build a frontend drive-style list view that displays all saved lecture links. Each entry should show the title, label/category badge, notes snippet, creation date, and a clickable button to open the video URL in a new tab.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "drive may lika yad rakhna",
+          "wo lecture ka link ha record video is link ka under may ha"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All saved lecture entries are displayed in a list/card layout.",
+        "Each card shows: title, label badge, notes preview, date saved, and an 'Open Video' button.",
+        "Clicking 'Open Video' opens the link in a new browser tab.",
+        "The list updates immediately after a new entry is saved."
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Add search and filter functionality to the lecture list so users can search by title or notes keyword, and filter by label/category.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "alag say save karna ha",
+          "yad rakhna"
+        ]
+      },
+      "acceptanceCriteria": [
+        "A search bar filters displayed entries by title or notes content in real time.",
+        "A label/category filter dropdown narrows results to the selected tag.",
+        "Clearing the search/filter restores the full list."
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Allow users to delete a saved lecture link entry from the list view.",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ]
+      },
+      "acceptanceCriteria": [
+        "A delete button is present on each lecture entry card.",
+        "Clicking delete removes the entry from the backend and the UI updates immediately.",
+        "A confirmation prompt is shown before deletion."
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Apply a clean, modern notebook/drive-inspired visual theme — warm neutral tones (cream, amber, slate), clear card-based layout, readable typography, and subtle folder/bookmark iconography — consistently across all pages and components.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All pages use a consistent warm neutral color palette.",
+        "Cards have clean borders, subtle shadows, and clear typographic hierarchy.",
+        "Label badges use distinct accent colors for visual differentiation.",
+        "The UI feels organized and drive/notebook-like throughout."
+      ]
+    }
+  ],
+  "constraints": [
+    "All lecture data must be stored on-chain in the Motoko backend using stable storage.",
+    "Do not integrate any external drive or cloud storage services."
+  ],
+  "nonGoals": [
+    "User authentication or multi-user support.",
+    "Video playback inside the app — links open externally.",
+    "File upload or video hosting.",
+    "Real-time collaboration features."
+  ],
+  "imageRequirements": {
+    "required": [
+      "Flat illustration of a bookmarked notebook with a play button on the cover, warm amber and cream tones (lecture-vault-logo.dim_256x256.png)"
+    ],
+    "edits": []
+  }
+}
